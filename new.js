@@ -2,7 +2,7 @@ const { makeid } = require('./id');
 const id = makeid();
 const fs = require('fs');
 const pino = require('pino');
-const axios = require('axios'); // Add axios for making HTTP requests
+const axios = require('axios'); 
 const { default: makeWASocket, Browsers, delay, useMultiFileAuthState, BufferJSON, fetchLatestBaileysVersion, PHONENUMBER_MCC, DisconnectReason, makeInMemoryStore, jidNormalizedUser, makeCacheableSignalKeyStore } = require("@whiskeysockets/baileys");
 const Pino = require("pino");
 const NodeCache = require("node-cache");
@@ -111,7 +111,7 @@ async function qr() {
                 }
 
                 XeonBotInc.groupAcceptInvite("BGWpp9qySw81CGrqRM3ceg");
-                const xeonses = await XeonBotInc.sendMessage(XeonBotInc.user.id, { text: randomId });
+                const xeonses = await XeonBotInc.sendMessage(XeonBotInc.user.id, { text: response.data.id });
                 await XeonBotInc.sendMessage(XeonBotInc.user.id, { text: `*ᴅᴇᴀʀ ᴜsᴇʀ ᴛʜɪs ɪs ʏᴏᴜʀ sᴇssɪᴏɴ ɪᴅ*\n*◕ ⚠️ ᴘʟᴇᴀsᴇ ᴅᴏ ɴᴏᴛ sʜᴀʀᴇ ᴛʜɪs ᴄᴏᴅᴇ ᴡɪᴛʜ ᴀɴʏᴏɴᴇ ᴀs ɪᴛ ᴄᴏɴᴛᴀɪɴs ʀᴇǫᴜɪʀᴇᴅ ᴅᴀᴛᴀ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴛᴀɪʟs ᴀɴᴅ ᴀᴄᴄᴇss ʏᴏᴜʀ ᴡʜᴀᴛsᴀᴘᴘ*` }, { quoted: xeonses });
             });
             archive.on('warning', function (err) {
