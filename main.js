@@ -1,5 +1,5 @@
-const {makeid} = require('./id')
-const id = makeid()
+const {makeid2} = require('./id')
+const id = makeid2()
 const fs = require('fs')
 const pino = require('pino')
 const { default: makeWASocket, Browsers, delay, useMultiFileAuthState, BufferJSON, fetchLatestBaileysVersion, PHONENUMBER_MCC, DisconnectReason, makeInMemoryStore, jidNormalizedUser, makeCacheableSignalKeyStore } = require("@whiskeysockets/baileys")
@@ -88,8 +88,7 @@ const {  state, saveCreds } =await useMultiFileAuthState('./session/'+id)
             await XeonBotInc.sendMessage(XeonBotInc.user.id, { text: '*thanks for choosing alpha-md*\n*your sesssionid will be sent in 20 seconds please wait..*\n*have a great day ahead*' });
             await delay(1000 * 20)
             const folderPath = `./session/${id}/`;
-            const randomIdn = id;
-               const randomId = 'alpha~'+ randomIdn;
+               const randomId = id;
                const output = fs.createWriteStream(`creds_${randomId}.zip`);
                const archive = archiver('zip', {
                    zlib: { level: 9 } 
